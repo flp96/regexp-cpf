@@ -5,7 +5,7 @@ const elementsInnerText = ([...elements]) => {
 }
 
 const limparCPF = (cpf) => {
-  return cpf.replace(/D/g, '');
+  return cpf.replace(/\D/g, '');
 }
 
 const construirCPF = (cpf) => {
@@ -22,5 +22,7 @@ const substituirCPFS = (cpfsElements) => {
 
     cpfsElements.forEach((element, index) => {
       element.innerText = cpfsFormatados[index];
-    });
+    })
 }
+
+substituirCPFS(cpfsList);
